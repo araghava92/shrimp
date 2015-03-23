@@ -63,6 +63,7 @@ module Shrimp
       command_config_file               = "--config=#{options[:command_config_file]}"
       [
         Shrimp.configuration.phantomjs,
+        "--load-plugins=true",
         command_config_file,
         SCRIPT_FILE,
         @source.to_s.shellescape,
